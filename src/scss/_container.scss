@@ -1,0 +1,153 @@
+.name {
+  font-family: 'TT-Lakes';
+  color: #7e7e82;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.swiper {
+  display: none;
+}
+
+.swiper-slide {
+  border: solid 1px #eaeaea;
+}
+
+.name {
+  height: 40px;
+  margin: 0;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: solid 1px #d9fff5;
+  background: #f8f8f8;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 248, 248, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.tablet-ver__btn,
+.pc-ver__btn {
+  width: 240px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  height: 72px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border: solid 1px #eaeaea;
+}
+
+.tablet-ver {
+  background-color: #f8f8f8;
+}
+
+.tablet-ver__brandlist {
+  box-sizing: border-box;
+  padding: 16px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+#showAllButton {
+  display: flex;
+  align-items: center;
+  color: black;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+@media (min-width: 1121px) {
+  body {
+    box-sizing: border-box;
+  }
+  .pc-ver__btn {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1120px) {
+  body {
+    box-sizing: border-box;
+  }
+
+  .tablet-ver__brandlist .tablet-ver__btn:nth-child(n + 7) {
+    display: none;
+  }
+
+  .pc-ver__btn {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .tablet-ver {
+    display: none;
+  }
+
+  article {
+    width: 100%;
+    margin: 0;
+  }
+
+  .swiper {
+    display: flex;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding-bottom: 30px;
+    padding-top: 16px;
+    margin: 0;
+  }
+  .swiper-pagination-bullet {
+    background: #dddddd;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #b5b6bc;
+    opacity: 1;
+  }
+
+  .swiper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 56px;
+    pointer-events: none;
+    background: linear-gradient(
+      to left,
+      rgba(248, 248, 248, 1) 0%,
+      rgba(248, 248, 248, 0.6) 40%,
+      rgba(248, 248, 248, 0) 100%
+    );
+    z-index: 5;
+  }
+
+  div.swiper-slide {
+    background-color: #ffffff;
+    border-radius: 6px;
+    max-width: 240px;
+    height: 72px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: solid 1px #eaeaea;
+  }
+}
