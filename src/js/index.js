@@ -56,11 +56,23 @@ showAllButton.addEventListener('click', () => {
   updateVisibility()
 })
 
-const toggleBtn = document.getElementById('modalBtn');
-const modal = document.getElementById('modal');
-
-toggleBtn.addEventListener('click', () => {
-  modal.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function () {
+  const modalBtn = document.getElementById('modal-btn');
+  const modal = document.getElementById('modal');
+  const closeBtn = document.getElementById('closeBtn');
+  modalBtn.addEventListener('click', function () {
+    modal.classList.add ('active');
+  });
+  closeBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    modal.classList.remove ('active');
+  });
+  modal.addEventListener('click', function (event) {
+    modal.addEventListener('click', function (event) {
+      if (event.target === modal) {
+        modal.classList.remove ('active');
+      }
+    });
+  });
 });
-
 
