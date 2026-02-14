@@ -55,3 +55,12 @@ showAllButton.addEventListener('click', () => {
   }
   updateVisibility()
 })
+
+const toggleBtn = document.getElementById('modalBtn');
+const modal = document.getElementById('modal');
+
+toggleBtn.addEventListener('click', () => {
+  modal.classList.toggle('active');
+});
+
+

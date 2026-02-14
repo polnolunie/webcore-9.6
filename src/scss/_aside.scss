@@ -8,15 +8,24 @@ aside {
   width: 320px;
   height: 100vh;
   min-height: 700px;
-  position: sticky;
+  position: fixed;
   display: flex;
   flex-direction: column;
   left: 0;
   top: 0;
+  overflow-y: auto;
+  border: none;
   box-shadow:
     16px 0px 52px 0px rgba(14, 24, 80, 0.2),
     -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+  background: white;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  z-index: 100;
 
+  &.active {
+    transform: translateX(0);
+  }
   main {
     flex: 1;
   }
