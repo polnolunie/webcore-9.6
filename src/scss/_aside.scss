@@ -1,41 +1,32 @@
-* {
-  margin: 0px;
-  font-family: 'TTLakes-Medium';
-  box-sizing: border-box;
-}
-
-aside {
+.modal {
   width: 320px;
+  min-height: 1000px;
   height: 100vh;
-  min-height: 700px;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  left: 0;
-  top: 0;
-  overflow-y: auto;
   border: none;
+  position: fixed;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background: white;
   box-shadow:
     16px 0px 52px 0px rgba(14, 24, 80, 0.2),
     -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
-  background: white;
-  transition: transform 0.3s ease;
-  transform: translateX(-100%);
-  z-index: 100;
-
-  &.active {
-    transform: translateX(0);
-  }
+  z-index: 999;
   main {
-    flex: 1;
+    overflow-x: hidden;
+
+    &.container {
+      padding: 0;
+    }
   }
 
   header {
     display: inline-flex;
     align-items: center;
-    padding: 23px;
+    padding: 20px;
     gap: 15px;
   }
+
   .search {
     position: relative;
     left: 67px;
@@ -44,25 +35,24 @@ aside {
   ul {
     list-style: none;
     padding: 0;
-  }
 
-  ul > li {
-    height: 40px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    border-left: solid 4px transparent;
-    transition:
-      color 0.3s ease,
+    > li {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      border-left: solid 4px transparent;
+      transition: color 0.3s ease,
       transform 0.3s ease;
-  }
 
-  ul > li:hover {
-    border-left: solid 4px #41f6d7;
-    color: #7e7e82;
-    cursor: pointer;
-    transform: scale(1.1);
-    transform: translateX(1px);
+      &:hover {
+        border-left: solid 4px #41f6d7;
+        color: #7e7e82;
+        cursor: pointer;
+        transform: scale(1.1);
+        transform: translateX(1px);
+      }
+    }
   }
 
   footer {
@@ -73,12 +63,12 @@ aside {
     gap: 20px;
     padding: 0px;
     border: none;
+    position: fixed;
+    bottom: 0;
+    > div {
+      padding: 0px 24px;
+    }
   }
-
-  footer > div {
-    padding: 0px 24px;
-  }
-
   svg {
     cursor: pointer;
   }
@@ -95,11 +85,11 @@ aside {
     border-radius: 20px;
     overflow: visible;
     transition: filter 0.3s ease;
-  }
 
-  a:hover {
-    filter: brightness(0.7);
-    cursor: pointer;
+    &:hover {
+      filter: brightness(0.7);
+      cursor: pointer;
+    }
   }
 
   .footer svg {
@@ -116,15 +106,15 @@ aside {
   .language {
     padding-bottom: 10px;
     padding-left: 20px;
-  }
 
-  .language > a {
-    padding: 5px;
-    text-decoration: none;
-    color: black;
-  }
+    a {
+      padding: 5px;
+      text-decoration: none;
+      color: black;
 
-  .language > a:hover {
-    color: #7e7e82;
+      &:hover {
+        color: #7e7e82;
+      }
+    }
   }
 }

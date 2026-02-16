@@ -1,10 +1,4 @@
-.name {
-  font-family: 'TT-Lakes';
-  color: #7e7e82;
-  font-size: 16px;
-  line-height: 24px;
-}
-
+@import "variables";
 .swiper {
   display: none;
 }
@@ -13,23 +7,7 @@
   border: solid 1px #eaeaea;
 }
 
-.name {
-  height: 40px;
-  margin: 0;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  border-top: solid 1px #d9fff5;
-  background: #f8f8f8;
-  background: linear-gradient(
-    90deg,
-    rgba(248, 248, 248, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-}
-
-.tablet-ver__btn,
+ .tablet-ver__btn,
 .pc-ver__btn {
   width: 240px;
   background-color: #ffffff;
@@ -43,7 +21,7 @@
 }
 
 .tablet-ver {
-  background-color: #f8f8f8;
+  background-color: &background-color;
 }
 
 .tablet-ver__brandlist {
@@ -60,14 +38,14 @@
 #showAllButton {
   display: flex;
   align-items: center;
-  color: black;
+  color: $text-color;
   cursor: pointer;
   background-color: transparent;
   border: none;
 }
 
 @media (min-width: 1121px) {
-  body {
+  .brand-container {
     box-sizing: border-box;
   }
   .pc-ver__btn {
@@ -76,7 +54,7 @@
 }
 
 @media (min-width: 769px) and (max-width: 1120px) {
-  body {
+  .brand-container {
     box-sizing: border-box;
   }
 
@@ -90,7 +68,7 @@
 }
 
 @media (max-width: 768px) {
-  body {
+  .brand-container {
     margin: 0;
     box-sizing: border-box;
   }
@@ -107,7 +85,7 @@
   .swiper {
     display: flex;
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: $background-color;
     padding-bottom: 30px;
     padding-top: 16px;
     margin: 0;

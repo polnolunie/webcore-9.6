@@ -54,25 +54,34 @@ showAllButton.addEventListener('click', () => {
     isPcShown = !isPcShown
   }
   updateVisibility()
-})
-
-document.addEventListener('DOMContentLoaded', function () {
-  const modalBtn = document.getElementById('modal-btn');
-  const modal = document.getElementById('modal');
-  const closeBtn = document.getElementById('closeBtn');
-  modalBtn.addEventListener('click', function () {
-    modal.classList.add ('active');
-  });
-  closeBtn.addEventListener('click', function (event) {
-    event.preventDefault();
-    modal.classList.remove ('active');
-  });
-  modal.addEventListener('click', function (event) {
-    modal.addEventListener('click', function (event) {
-      if (event.target === modal) {
-        modal.classList.remove ('active');
-      }
-    });
-  });
 });
+
+const modal = document.getElementById('modal');
+
+function openModal() {
+  modal.classList.add('open');
+  document.body.classList.add('shifted');
+  modal.showModal();
+}
+
+function closeModal() {
+  modal.classList.remove('open');
+  document.body.classList.remove('shifted');
+  modal.close();
+}
+
+// Перехват закрытия через кнопку внутри dialog
+document.getElementById('modalClose-btn').addEventListener('click', (e) => {
+  e.preventDefault();
+  closeModal();
+});
+
+// Если у вас есть кнопка открытия, например:
+document.getElementById('modalOpen-btn').addEventListener('click', (e) => {
+  e.preventDefault();
+  openModal();
+});
+
+
+
 
