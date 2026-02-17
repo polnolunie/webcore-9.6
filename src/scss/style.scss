@@ -123,7 +123,7 @@ header.desktop-ver {
       }
     }
   }
-}
+
 main {
   padding: 25px;
   display: flex;
@@ -166,6 +166,7 @@ main {
   display: flex;
   color: #7e7e82;
   font-size: 16px;
+  font-weight: 400;
   line-height: 24px;
   align-items: center;
   flex-wrap: wrap;
@@ -181,11 +182,79 @@ main {
   display: none;
 }
 
-#modalOpen-btn, #modalClose-btn {
-  border: none;
-  background-color: transparent;
-  &:hover {
-    cursor: pointer;
+ #modalOpen-btn, #modalClose-btn {
+   border: none;
+   background-color: transparent;
+
+   &:hover {
+     cursor: pointer;
+   }
+ }
+
+  .body-end {
+    border-top: solid 1px #D9FFF5;
+  }
+
+  .repairCervice-wrapper {
+
+    height: 280px;
+
+    div {
+      padding-top: 24px;
+    }
+
+    ul.repairCervice {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      padding-top: 24px;
+
+      li {
+        width: 240px;
+        height: 160px;
+        background-color: #ffffff;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        img {
+          align-self: flex-end;
+        }
+
+      }
+    }
+  }
+  .price-list {
+    list-style-type: none;
+    li {
+      background-color: #ffffff;
+    }
+    li > .price-list__column {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .comment {
+    font-weight:400;
+    width: 420px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 32px;
+  }
+  .commertial-container {
+    padding-left: 32px;
+
+    img {
+      padding-left: 9px;
+    }
   }
 }
 
@@ -377,7 +446,7 @@ main {
 
 @media (min-width: 1121px) {
   body {
-    position: relative;
-    left: 300px;
+    padding-left: 300px;
+    padding-right: 10px;
   }
 }
