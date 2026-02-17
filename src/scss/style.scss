@@ -1,6 +1,6 @@
 @import 'variables';
 @import 'container';
-@import "dialog";
+@import 'dialog';
 @import 'aside';
 
 @font-face {
@@ -33,7 +33,6 @@
 }
 
 body {
-
   background-color: #f8f8f8;
   color: #1b1c21;
   font-weight: 500;
@@ -42,224 +41,222 @@ body {
   text-align: left;
   height: auto;
   width: 100%;
-  overflow-x: hidden;}
-
-header.desktop-ver {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
-  padding-top: 40px;
+  overflow-x: hidden;
 }
-
-.icon__logo {
-  display: flex;
-  align-items: center;
-  position: relative;
-  bottom: 10px;
-  height: 40px;
-  padding-left: 35px;
-  font-size: 28px;
-  font-weight: 700;
-  border-left: solid 3px #41f6d7;
-}
-
-.header__icon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.icon__img {
-  width: 40px;
-  height: 40px;
-  margin-left: 5px;
-  margin-top: 5px;
-}
-
-.group__text {
-  max-width: 175px;
-  height: 30px;
-  font-weight: 500;
-  font-size: 16px;
-  display: inline-flex;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-.navigation {
-  max-height: 80px;
-  min-height: 50px;
-  padding: 10px;
-
-  > ul {
-    list-style: none;
-    display: inline-flex;
+  header.desktop-ver {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    text-align: center;
+    padding-top: 40px;
   }
 
-  ul {
-    text-align: center;
+  .icon__logo {
     display: flex;
     align-items: center;
+    position: relative;
+    bottom: 10px;
+    height: 40px;
+    padding-left: 35px;
+    font-size: 28px;
+    font-weight: 700;
+    border-left: solid 3px #41f6d7;
+  }
 
-    li a {
-      height: 40px;
-      font-size: 16px;
-      font-weight: 500;
-      color: #7e7e82;
-      text-decoration: none;
-      padding: 0 22px;
-      border: solid 2px transparent;
+  .header__icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .icon__img {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+
+  .group__text {
+    max-width: 175px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .navigation {
+    max-height: 80px;
+    min-height: 50px;
+    padding: 10px;
+
+    > ul {
+      list-style: none;
+      display: inline-flex;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      text-align: center;
       display: flex;
       align-items: center;
 
-      &:hover {
-        border: solid 2px #b8ffec;
-        border-radius: 5px;
-        background-color: #fff;
+      li a {
+        height: 40px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #7e7e82;
+        text-decoration: none;
+        padding: 0 22px;
+        border: solid 2px transparent;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          border: solid 2px #b8ffec;
+          border-radius: 5px;
+          background-color: #fff;
+        }
       }
     }
   }
 
-main {
-  padding: 25px;
-  display: flex;
-  flex-direction: row;
-
-  .main-container > div {
-    color: $text-color;
-    font-size: 14px;
-    font-weight: 400;
-  }
-}
-
-.right-img img {
-  border-radius: 10px;
-  height: auto;
-  max-width: 700px;
-  display: flex;
-}
-
-  .showall-btn {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 15px;
-
-    a {
-      text-decoration: none;
-      color: #1b1c21;
-
-      img {
-        position: relative;
-        top: 6px;
-      }
-    }
-  }
-
-.name {
-  padding: 16px;
-  display: flex;
-  color: #7e7e82;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  align-items: center;
-  flex-wrap: wrap;
-  border-top: solid 1px #d9fff5;
-  background: linear-gradient(
-      90deg,
-      rgba(248, 248, 248, 1) 0%,
-      rgba(255, 255, 255, 1) 100%
-  );
-}
-
-.tablet-version {
-  display: none;
-}
-
- #modalOpen-btn, #modalClose-btn {
-   border: none;
-   background-color: transparent;
-
-   &:hover {
-     cursor: pointer;
-   }
- }
-
-  .body-end {
-    border-top: solid 1px #D9FFF5;
-  }
-
-  .repairCervice-wrapper {
-
-    height: 280px;
-
-    div {
-      padding-top: 24px;
-    }
-
-    ul.repairCervice {
-      list-style-type: none;
+    main {
+      padding: 25px;
       display: flex;
       flex-direction: row;
-      gap: 32px;
-      padding-top: 24px;
 
-      li {
-        width: 240px;
-        height: 160px;
-        background-color: #ffffff;
-        border: 1px solid #EAEAEA;
-        border-radius: 6px;
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
+      .main-container > div {
+        color: $text-color;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    .right-img img {
+      border-radius: 10px;
+      height: auto;
+      max-width: 700px;
+      display: flex;
+    }
+
+    .showall-btn {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 15px;
+
+      a {
+        text-decoration: none;
+        color: #1b1c21;
 
         img {
-          align-self: flex-end;
+          position: relative;
+          top: 6px;
         }
-
       }
     }
-  }
-  .price-list {
-    list-style-type: none;
-    li {
-      background-color: #ffffff;
-    }
-    li > .price-list__column {
-      list-style-type: none;
+
+    .name {
+      padding: 16px;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      color: #7e7e82;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+      border-top: solid 1px #d9fff5;
+      background: linear-gradient(
+        90deg,
+        rgba(248, 248, 248, 1) 0%,
+        rgba(255, 255, 255, 1) 100%
+      );
     }
-  }
 
-  .comment {
-    font-weight:400;
-    width: 420px;
-    font-size: 14px;
-    line-height: 20px;
-    padding-left: 32px;
-  }
-  .commertial-container {
-    padding-left: 32px;
-
-    img {
-      padding-left: 9px;
+    .tablet-version {
+      display: none;
     }
-  }
-}
+
+    #modalOpen-btn,
+    #modalClose-btn {
+      border: none;
+      background-color: transparent;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .body-end {
+      border-top: solid 1px #d9fff5;
+    }
+
+    .repairCervice-wrapper {
+      height: 280px;
+
+      div {
+        padding-top: 24px;
+      }
+
+      ul.repairCervice {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        padding-top: 24px;
+
+        li {
+          width: 240px;
+          height: 160px;
+          background-color: #ffffff;
+          border: 1px solid #eaeaea;
+          border-radius: 6px;
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          img {
+            align-self: flex-end;
+          }
+        }
+      }
+    }
+    .price-list {
+      list-style-type: none;
+      li {
+        background-color: #ffffff;
+      }
+      li > .price-list__column {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .comment {
+      font-weight: 400;
+      width: 420px;
+      font-size: 14px;
+      line-height: 20px;
+      padding-left: 32px;
+    }
+    .commertial-container {
+      padding-left: 32px;
+
+      img {
+        padding-left: 9px;
+      }
+    }
 
 @media (max-width: 768px) {
-
   .header__group {
     display: none;
   }
@@ -282,7 +279,6 @@ main {
       gap: 10px;
       box-sizing: border-box;
     }
-
   }
 
   .tablet-version-hide {
@@ -326,7 +322,7 @@ main {
   .right-img > img {
     width: 100%;
     height: auto;
-    border-radius: 0px;
+    border-radius: 0;
   }
 
   .navigation {
@@ -365,7 +361,6 @@ main {
 }
 
 @media (min-width: 769px) and (max-width: 1120px) {
-
   .header__group {
     display: none;
   }

@@ -429,38 +429,42 @@ header.desktop-ver {
   border-radius: 5px;
   background-color: #fff;
 }
-.navigation main {
+
+main {
   padding: 25px;
   display: flex;
   flex-direction: row;
 }
-.navigation main .main-container > div {
+main .main-container > div {
   color: #1b1c21;
   font-size: 14px;
   font-weight: 400;
 }
-.navigation .right-img img {
+
+.right-img img {
   border-radius: 10px;
   height: auto;
   max-width: 700px;
   display: flex;
 }
-.navigation .showall-btn {
+
+.showall-btn {
   display: flex;
   align-items: center;
   font-weight: 500;
   font-size: 16px;
   padding: 15px;
 }
-.navigation .showall-btn a {
+.showall-btn a {
   text-decoration: none;
   color: #1b1c21;
 }
-.navigation .showall-btn a img {
+.showall-btn a img {
   position: relative;
   top: 6px;
 }
-.navigation .name {
+
+.name {
   padding: 16px;
   display: flex;
   color: #7e7e82;
@@ -472,37 +476,43 @@ header.desktop-ver {
   border-top: solid 1px #d9fff5;
   background: linear-gradient(90deg, rgb(248, 248, 248) 0%, rgb(255, 255, 255) 100%);
 }
-.navigation .tablet-version {
+
+.tablet-version {
   display: none;
 }
-.navigation #modalOpen-btn, .navigation #modalClose-btn {
+
+#modalOpen-btn,
+#modalClose-btn {
   border: none;
   background-color: transparent;
 }
-.navigation #modalOpen-btn:hover, .navigation #modalClose-btn:hover {
+#modalOpen-btn:hover,
+#modalClose-btn:hover {
   cursor: pointer;
 }
-.navigation .body-end {
-  border-top: solid 1px #D9FFF5;
+
+.body-end {
+  border-top: solid 1px #d9fff5;
 }
-.navigation .repairCervice-wrapper {
+
+.repairCervice-wrapper {
   height: 280px;
 }
-.navigation .repairCervice-wrapper div {
+.repairCervice-wrapper div {
   padding-top: 24px;
 }
-.navigation .repairCervice-wrapper ul.repairCervice {
+.repairCervice-wrapper ul.repairCervice {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   gap: 32px;
   padding-top: 24px;
 }
-.navigation .repairCervice-wrapper ul.repairCervice li {
+.repairCervice-wrapper ul.repairCervice li {
   width: 240px;
   height: 160px;
   background-color: #ffffff;
-  border: 1px solid #EAEAEA;
+  border: 1px solid #eaeaea;
   border-radius: 6px;
   padding: 16px;
   display: flex;
@@ -510,32 +520,35 @@ header.desktop-ver {
   justify-content: space-between;
   align-items: flex-start;
 }
-.navigation .repairCervice-wrapper ul.repairCervice li img {
+.repairCervice-wrapper ul.repairCervice li img {
   align-self: flex-end;
 }
-.navigation .price-list {
+
+.price-list {
   list-style-type: none;
 }
-.navigation .price-list li {
+.price-list li {
   background-color: #ffffff;
 }
-.navigation .price-list li > .price-list__column {
+.price-list li > .price-list__column {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.navigation .comment {
+
+.comment {
   font-weight: 400;
   width: 420px;
   font-size: 14px;
   line-height: 20px;
   padding-left: 32px;
 }
-.navigation .commertial-container {
+
+.commertial-container {
   padding-left: 32px;
 }
-.navigation .commertial-container img {
+.commertial-container img {
   padding-left: 9px;
 }
 
@@ -594,7 +607,7 @@ header.desktop-ver {
   .right-img > img {
     width: 100%;
     height: auto;
-    border-radius: 0px;
+    border-radius: 0;
   }
   .navigation {
     max-width: 100%;
