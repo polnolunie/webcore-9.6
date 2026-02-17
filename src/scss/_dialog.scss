@@ -1,26 +1,30 @@
-
-.modal__desktop {
-
-  width: 300px;
-  height: 100%;
+.modal {
+  width: 320px;
+  min-height: 2000px;
+  height: 100vh;
   border: none;
   position: fixed;
   padding: 0;
   top: 0;
   left: 0;
   background: white;
-  display: flex;
-  flex-direction: column;
+  box-shadow:
+    16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+    -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+  z-index: 999;
+  main {
+    overflow-x: hidden;
+
+    &.container {
+      padding: 0;
+    }
+  }
 
   header {
     display: inline-flex;
     align-items: center;
     padding: 20px;
     gap: 15px;
-  }
-
-  .left__logo {
-    padding-left: 22px;
   }
 
   .search {
@@ -61,12 +65,10 @@
     border: none;
     position: fixed;
     bottom: 0;
-
     > div {
       padding: 0px 24px;
     }
   }
-
   svg {
     cursor: pointer;
   }
