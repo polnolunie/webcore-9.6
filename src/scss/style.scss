@@ -183,7 +183,7 @@ body {
     }
 
     #modalOpen-btn,
-    #modalClose-btn {
+    #modalClose-btn, {
       border: none;
       background-color: transparent;
 
@@ -191,6 +191,13 @@ body {
         cursor: pointer;
       }
     }
+
+   .showAllButton2 {
+     border: none;
+     background-color: transparent;
+     display: flex;
+     align-items: center;
+   }
 
     .body-end {
       border-top: solid 1px #d9fff5;
@@ -228,16 +235,55 @@ body {
         }
       }
     }
-    .price-list {
-      list-style-type: none;
-      li {
-        background-color: #ffffff;
-      }
-      li > .price-list__column {
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+
+    .price-wrapper {
+      max-width: 1056px;
+      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      left: 32px;
+
+      .price-list {
+        border-collapse: collapse;
+        width: 100%;
+
+        tr {
+          background-color: #ffffff;
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            border-bottom: 1px solid #EAEAEA;
+          }
+
+          th {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color: #7E7E82;
+            background-color: #f8f8f8;
+            padding: 20px;
+            width: 100%;
+          }
+
+          td {
+            background-color: #ffffff;
+            padding: 20px;
+
+            &.order {
+              text-align: right;
+            }
+            img {
+              cursor: pointer;
+            }
+          }
+        }
       }
     }
 
@@ -254,6 +300,27 @@ body {
       img {
         padding-left: 9px;
       }
+    }
+
+    footer.body-end {
+      color: #7E7E82;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      div {
+        padding: 32px;
+
+        .body-end2 {
+          text-align: center;
+        }
+
+        .body-end3 {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+
     }
 
 @media (max-width: 768px) {

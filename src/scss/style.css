@@ -491,6 +491,13 @@ main .main-container > div {
   cursor: pointer;
 }
 
+.showAllButton2 {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+
 .body-end {
   border-top: solid 1px #d9fff5;
 }
@@ -524,17 +531,49 @@ main .main-container > div {
   align-self: flex-end;
 }
 
-.price-list {
-  list-style-type: none;
-}
-.price-list li {
-  background-color: #ffffff;
-}
-.price-list li > .price-list__column {
-  list-style-type: none;
+.price-wrapper {
+  max-width: 1056px;
+  overflow-x: hidden;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
+  left: 32px;
+}
+.price-wrapper .price-list {
+  border-collapse: collapse;
+  width: 100%;
+}
+.price-wrapper .price-list tr {
+  background-color: #ffffff;
+  position: relative;
+}
+.price-wrapper .price-list tr:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  border-bottom: 1px solid #EAEAEA;
+}
+.price-wrapper .price-list tr th {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #7E7E82;
+  background-color: #f8f8f8;
+  padding: 20px;
+  width: 100%;
+}
+.price-wrapper .price-list tr td {
+  background-color: #ffffff;
+  padding: 20px;
+}
+.price-wrapper .price-list tr td.order {
+  text-align: right;
+}
+.price-wrapper .price-list tr td img {
+  cursor: pointer;
 }
 
 .comment {
@@ -550,6 +589,23 @@ main .main-container > div {
 }
 .commertial-container img {
   padding-left: 9px;
+}
+
+footer.body-end {
+  color: #7E7E82;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer.body-end div {
+  padding: 32px;
+}
+footer.body-end div .body-end2 {
+  text-align: center;
+}
+footer.body-end div .body-end3 {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 768px) {

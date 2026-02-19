@@ -271,7 +271,7 @@
         /></li>
     </ul>
     <div class="tablet__showall">
-      <button id="showAllButton">
+      <button class="showAllButton2">
         <img src="./img/readmore.svg" alt="showall icon" /> Показать все
       </button>
     </div>
@@ -397,52 +397,58 @@
         </div>
       </footer>
     </dialog>
-    <article class="price-wrapper">
+    <article>
     <div class="name">ЦЕНЫ НА УСЛУГИ</div>
-    <ul class="price-list">
-      <li class="price-list__title">
-        <ul class="price-list__column">
-          <li>Ремонтные усуги</li>
-          <li>Цена</li>
-          <li>Срок</li>
-        </ul>
-      </li>
-      <li>
-        <ul class="price-list__column">
-          <li>Диагностика</li>
-          <li>Бесплатно</li>
-          <li>30 мин</li>
-        </ul>
-      </li>
-      <li>
-        <ul class="price-list__column">
-          <li>Замена дисплея</li>
-          <li>1 000 ₽</li>
-          <li>30-120 мин</li>
-        </ul>
-      </li>
-      <li>
-        <ul class="price-list__column">
-          <li>Замена полифонического динамика</li>
-          <li>1 000 ₽</li>
-          <li>30-120 мин</li>
-        </ul>
-      </li>
-      <li>
-        <ul class="price-list__column">
-          <li>Тестирование с выдачей технологического заключения</li>
-          <li>1 000 ₽</li>
-          <li>30-120 мин</li>
-        </ul>
-      </li>
-      <li>
-        <ul class="price-list__column">
-          <li>Замена программного обеспечения</li>
-          <li>1 000 ₽</li>
-          <li>30-120 мин</li>
-        </ul>
-      </li>
-    </ul>
+      <div class="price-wrapper">
+    <table class="price-list">
+      <tr class="price-list__column">
+          <th>Ремонтные усуги</th>
+          <th>Цена</th>
+          <th>Срок</th>
+          <th> </th>
+      </tr>
+        <tr class="price-list__column">
+          <td>Диагностика</td>
+          <td>Бесплатно</td>
+          <td>30 мин</td>
+          <td class="order">
+            <img src="./img/order.svg" alt="order button">
+          </td>
+        </tr>
+        <tr class="price-list__column">
+          <td>Замена дисплея</td>
+          <td>1 000 ₽</td>
+          <td>30-120 мин</td>
+          <td class="order">
+            <img src="./img/order.svg" alt="order button">
+          </td>
+        </tr>
+        <tr class="price-list__column">
+          <td>Замена полифонического динамика</td>
+          <td>1 000 ₽</td>
+          <td>30-120 мин</td>
+          <td class="order">
+            <img src="./img/order.svg" alt="order button">
+          </td>
+        </tr>
+        <tr class="price-list__column">
+          <td>Тестирование с выдачей технологического заключения</td>
+          <td>1 000 ₽</td>
+          <td>30-120 мин</td>
+          <td class="order">
+            <img src="./img/order.svg" alt="order button">
+          </td>
+        </tr>
+        <tr class="price-list__column">
+          <td>Замена программного обеспечения</td>
+          <td>1 000 ₽</td>
+          <td>30-120 мин</td>
+          <td class="order">
+            <img src="./img/order.svg" alt="order button">
+          </td>
+        </tr>
+    </table>
+      </div>
     </article>
     <div class="comment">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</div>
     <div class="commertial-container">
@@ -451,10 +457,10 @@
     </div>
 
     <footer class='body-end'>
-      <div>© 2019 CPS
+      <div class="body-end1">© 2019 CPS
         Разработано командой Apesong </div>
-      <div>Политика конфиденциальности</div>
-      <div>Информация, размещенная на данной странице, не является публичной офертой</div>
+      <div class="body-end2">Политика конфиденциальности</div>
+      <div class="body-end3">Информация, размещенная на данной странице, не является публичной офертой</div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
