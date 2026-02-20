@@ -3,16 +3,19 @@ import '../scss/style.scss'
 console.log('It works!')
 ;('use strict')
 
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 1.3,
-  spaceBetween: 15,
-  direction: 'horizontal',
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  }
-})
+document.querySelectorAll('.swiper').forEach((swiperEl) => {
+  new Swiper(swiperEl, {
+    slidesPerView: 1.3,
+    spaceBetween: 15,
+    direction: 'horizontal',
+    loop: true,
+    pagination: {
+      el: swiperEl.querySelector('.swiper-pagination'),
+      clickable: true,
+    },
+  });
+});
+
 
 const showAllButton = document.getElementById('showAllButton')
 const tabletButtons = document.querySelectorAll('.tablet-ver__btn')

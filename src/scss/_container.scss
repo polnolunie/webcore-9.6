@@ -26,7 +26,7 @@
 
 .tablet-ver__brandlist {
   box-sizing: border-box;
-  padding: 16px;
+  padding: 32px;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -42,6 +42,8 @@
   cursor: pointer;
   background-color: transparent;
   border: none;
+  padding-left: 32px;
+  padding-bottom: 32px;
 }
 
 @media (min-width: 1121px) {
@@ -90,6 +92,7 @@
     padding-top: 16px;
     margin: 0;
   }
+
   .swiper-pagination-bullet {
     background: #dddddd;
     opacity: 1;
@@ -121,7 +124,8 @@
     border-radius: 6px;
     max-width: 240px;
     height: 72px;
-    padding: 0 15px;
+    padding: 15px;
+    margin: 0 15px !important;
     display: flex;
     align-items: center;
     justify-content: space-between;

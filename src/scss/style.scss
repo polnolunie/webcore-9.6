@@ -125,7 +125,8 @@ body {
   }
 
     main {
-      padding: 25px;
+      padding-left: 32px;
+      padding-top: 16px;
       display: flex;
       flex-direction: row;
 
@@ -148,7 +149,6 @@ body {
       align-items: center;
       font-weight: 500;
       font-size: 16px;
-      padding: 15px;
 
       a {
         text-decoration: none;
@@ -162,8 +162,9 @@ body {
     }
 
     .name {
-      padding: 16px;
+      padding-left: 35px;
       display: flex;
+      height: 60px;
       color: #7e7e82;
       font-size: 16px;
       font-weight: 400;
@@ -197,11 +198,8 @@ body {
      background-color: transparent;
      display: flex;
      align-items: center;
+     padding-left: 32px;
    }
-
-    .body-end {
-      border-top: solid 1px #d9fff5;
-    }
 
     .repairCervice-wrapper {
       height: 280px;
@@ -293,9 +291,12 @@ body {
       font-size: 14px;
       line-height: 20px;
       padding-left: 32px;
+      padding-top: 32px;
     }
     .commertial-container {
       padding-left: 32px;
+      padding-top: 16px;
+      padding-bottom: 80px;
 
       img {
         padding-left: 9px;
@@ -307,23 +308,32 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      border-top: solid 1px #d9fff5;
 
       div {
         padding: 32px;
-
-        .body-end2 {
-          text-align: center;
-        }
-
-        .body-end3 {
-          display: flex;
-          justify-content: flex-end;
-        }
       }
 
     }
 
+    .body-end2 {
+      text-align: center;
+    }
+
+    .body-end3 {
+      text-align: right;
+      max-width: 450px;
+    }
+
+    hr {
+      border: none;
+    }
+
 @media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
+
   .header__group {
     display: none;
   }
@@ -424,6 +434,18 @@ body {
     gap: 20px;
     grid-template-columns: 1fr;
     max-width: 100%;
+  }
+
+  footer.body-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    div {
+      text-align: center;
+      padding-top: 16px;
+      height: 32px;
+    }
   }
 }
 
