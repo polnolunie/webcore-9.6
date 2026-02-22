@@ -323,10 +323,6 @@ body {
       max-width: 450px;
     }
 
-    hr {
-      border: none;
-    }
-
 @media (max-width: 768px) {
   html {
     overflow-x: hidden;
@@ -425,6 +421,16 @@ body {
         }
       }
     }
+
+    div.service-wrapper {
+
+      div {
+        .swiper-slide {
+          height: 200px;
+          width: 240px;
+        }
+      }
+  }
   }
 
   .main-container {
@@ -444,6 +450,29 @@ body {
       padding-top: 16px;
       height: 32px;
     }
+  }
+
+  .swiper-wrapper {
+    li {
+      width: 240px;
+      height: 160px;
+      background-color: #ffffff;
+      border: 1px solid #eaeaea;
+      border-radius: 6px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      img {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .repairCervice-wrapper {
+    display: none;
   }
 }
 

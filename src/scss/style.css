@@ -613,10 +613,6 @@ footer.body-end div {
   max-width: 450px;
 }
 
-hr {
-  border: none;
-}
-
 @media (max-width: 768px) {
   html {
     overflow-x: hidden;
@@ -700,6 +696,10 @@ hr {
   .navigation ul li a {
     white-space: nowrap;
   }
+  .navigation div.service-wrapper div .swiper-slide {
+    height: 200px;
+    width: 240px;
+  }
   .main-container {
     display: grid;
     gap: 20px;
@@ -715,6 +715,24 @@ hr {
     text-align: center;
     padding-top: 16px;
     height: 32px;
+  }
+  .swiper-wrapper li {
+    width: 240px;
+    height: 160px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .swiper-wrapper li img {
+    align-self: flex-end;
+  }
+  .repairCervice-wrapper {
+    display: none;
   }
 }
 @media (min-width: 769px) and (max-width: 1120px) {
