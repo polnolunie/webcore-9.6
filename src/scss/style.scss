@@ -27,7 +27,6 @@
 }
 
 * {
-  margin: 0 !important;
   box-sizing: border-box;
   font-family: 'TTLakes-Medium';
 }
@@ -41,7 +40,7 @@ body {
   text-align: left;
   height: auto;
   width: 100%;
-  overflow-x: hidden;
+  margin: 0;
 }
   header.desktop-ver {
     display: flex;
@@ -202,7 +201,7 @@ body {
    }
 
     .repairCervice-wrapper {
-      height: 280px;
+      height: 190px;
 
       div {
         padding-top: 24px;
@@ -267,7 +266,6 @@ body {
             color: #7E7E82;
             background-color: #f8f8f8;
             padding: 20px;
-            width: 100%;
           }
 
           td {

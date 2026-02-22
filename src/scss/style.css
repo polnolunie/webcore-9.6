@@ -339,7 +339,6 @@
   font-weight: 700;
 }
 * {
-  margin: 0 !important;
   box-sizing: border-box;
   font-family: "TTLakes-Medium";
 }
@@ -353,7 +352,7 @@ body {
   text-align: left;
   height: auto;
   width: 100%;
-  overflow-x: hidden;
+  margin: 0;
 }
 
 header.desktop-ver {
@@ -504,7 +503,7 @@ main .main-container > div {
 }
 
 .repairCervice-wrapper {
-  height: 280px;
+  height: 190px;
 }
 .repairCervice-wrapper div {
   padding-top: 24px;
@@ -564,7 +563,6 @@ main .main-container > div {
   color: #7E7E82;
   background-color: #f8f8f8;
   padding: 20px;
-  width: 100%;
 }
 .price-wrapper .price-list tr td {
   background-color: #ffffff;
