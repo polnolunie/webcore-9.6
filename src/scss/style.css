@@ -118,8 +118,7 @@
 }
 .modal {
   width: 320px;
-  min-height: 2000px;
-  height: 100vh;
+  min-height: 100vh;
   border: none;
   position: fixed;
   padding: 0;
@@ -128,9 +127,11 @@
   background: white;
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
   z-index: 999;
+  display: flex;
+  flex-direction: column;
 }
 .modal main {
-  overflow-x: hidden;
+  flex: 1;
 }
 .modal main.container {
   padding: 0;
@@ -143,7 +144,7 @@
 }
 .modal .search {
   position: relative;
-  left: 67px;
+  left: 60px;
 }
 .modal ul {
   list-style: none;
@@ -172,8 +173,6 @@
   gap: 20px;
   padding: 0px;
   border: none;
-  position: fixed;
-  bottom: 0;
 }
 .modal footer > div {
   padding: 0px 24px;
@@ -432,13 +431,13 @@ header.desktop-ver {
   background-color: #fff;
 }
 
-main {
+main.bodyMain {
   padding-left: 32px;
   padding-top: 16px;
   display: flex;
   flex-direction: row;
 }
-main .main-container > div {
+main.bodyMain .main-container > div {
   color: #1b1c21;
   font-size: 14px;
   font-weight: 400;
@@ -803,9 +802,8 @@ footer.body-end div {
   }
 }
 @media (min-width: 1121px) {
-  body {
-    padding-left: 300px;
-    padding-right: 10px;
+  .mainmenu-right {
+    margin-left: 300px;
   }
 }
 

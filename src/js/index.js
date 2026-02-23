@@ -21,8 +21,8 @@ const showAllButton = document.getElementById('showAllButton')
 const tabletButtons = document.querySelectorAll('.tablet-ver__btn')
 const pcButtons = document.querySelectorAll('.pc-ver__btn')
 
-let isShowingAll = false // для tablet-ver__btn на маленьких экранах
-let isPcShown = false // для pc-ver__btn на больших экранах
+let isShowingAll = false
+let isPcShown = false
 
 function updateVisibility() {
   if (window.innerWidth <= 1120) {
@@ -60,29 +60,15 @@ showAllButton.addEventListener('click', () => {
 });
 
 const modal = document.getElementById('modal');
+const closeBtn = document.getElementById('modalClose-btn');
+const openBtn = document.getElementById('modalOpenBtn');
 
-function openModal() {
-  modal.classList.add('open');
-  document.body.classList.add('shifted');
-  modal.showModal();
-}
-
-function closeModal() {
-  modal.classList.remove('open');
-  document.body.classList.remove('shifted');
-  modal.close();
-}
-
-// Перехват закрытия через кнопку внутри dialog
-document.getElementById('modalClose-btn').addEventListener('click', (e) => {
-  e.preventDefault();
-  closeModal();
+openBtn.addEventListener('click', () => {
+  modal.style.display = 'flex';
 });
-
-// Если у вас есть кнопка открытия, например:
-document.getElementById('modalOpen-btn').addEventListener('click', (e) => {
-  e.preventDefault();
-  openModal();
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+  console.log ('close modal');
 });
 
 

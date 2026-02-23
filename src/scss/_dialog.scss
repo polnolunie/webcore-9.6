@@ -1,7 +1,6 @@
 .modal {
   width: 320px;
-  min-height: 2000px;
-  height: 100vh;
+  min-height: 100vh;
   border: none;
   position: fixed;
   padding: 0;
@@ -12,9 +11,10 @@
     16px 0px 52px 0px rgba(14, 24, 80, 0.2),
     -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
   z-index: 999;
+  display: flex;
+  flex-direction: column;
   main {
-    overflow-x: hidden;
-
+    flex: 1;
     &.container {
       padding: 0;
     }
@@ -29,7 +29,7 @@
 
   .search {
     position: relative;
-    left: 67px;
+    left: 60px;
   }
 
   ul {
@@ -63,8 +63,6 @@
     gap: 20px;
     padding: 0px;
     border: none;
-    position: fixed;
-    bottom: 0;
     > div {
       padding: 0px 24px;
     }
