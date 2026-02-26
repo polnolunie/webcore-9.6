@@ -61,7 +61,7 @@ showAllButton.addEventListener('click', () => {
 
 const modal = document.getElementById('modal');
 const closeBtn = document.getElementById('modalClose-btn');
-const openBtn = document.getElementById('modalOpenBtn');
+const openBtn = document.getElementById('modalOpen-btn');
 
 openBtn.addEventListener('click', () => {
   modal.style.display = 'flex';

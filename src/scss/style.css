@@ -84,6 +84,19 @@
     padding-top: 16px;
     margin: 0;
   }
+  .brand-swiper div.swiper-slide {
+    background-color: #ffffff;
+    border-radius: 6px;
+    max-width: 240px;
+    height: 72px;
+    padding: 15px;
+    margin: 0 15px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: solid 1px #eaeaea;
+  }
   .swiper-pagination-bullet {
     background: #dddddd;
     opacity: 1;
@@ -102,19 +115,6 @@
     background: linear-gradient(to left, rgb(248, 248, 248) 0%, rgba(248, 248, 248, 0.6) 40%, rgba(248, 248, 248, 0) 100%);
     z-index: 5;
   }
-  div.swiper-slide {
-    background-color: #ffffff;
-    border-radius: 6px;
-    max-width: 240px;
-    height: 72px;
-    padding: 15px;
-    margin: 0 15px !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    border: solid 1px #eaeaea;
-  }
 }
 .modal {
   width: 320px;
@@ -127,7 +127,7 @@
   background: white;
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
   z-index: 999;
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 .modal main {
@@ -265,13 +265,11 @@
 .modal__desktop footer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
   padding: 0px;
   border: none;
-  position: fixed;
-  bottom: 0;
+  margin-top: auto;
 }
 .modal__desktop footer > div {
   padding: 0px 24px;
@@ -404,15 +402,12 @@ header.desktop-ver {
   min-height: 50px;
   padding: 10px;
 }
-.navigation > ul {
-  list-style: none;
-  display: inline-flex;
-  flex-wrap: wrap;
-}
 .navigation ul {
   text-align: center;
   display: flex;
   align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
 }
 .navigation ul li a {
   height: 40px;
@@ -420,7 +415,7 @@ header.desktop-ver {
   font-weight: 500;
   color: #7e7e82;
   text-decoration: none;
-  padding: 0 22px;
+  padding: 0 20px;
   border: solid 2px transparent;
   display: flex;
   align-items: center;
@@ -432,7 +427,8 @@ header.desktop-ver {
 }
 
 main.bodyMain {
-  padding-left: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
   padding-top: 16px;
   display: flex;
   flex-direction: row;
@@ -455,6 +451,8 @@ main.bodyMain .main-container > div {
   align-items: center;
   font-weight: 500;
   font-size: 16px;
+  padding-bottom: 16px;
+  padding-left: 10px;
 }
 .showall-btn a {
   text-decoration: none;
@@ -499,6 +497,8 @@ main.bodyMain .main-container > div {
   display: flex;
   align-items: center;
   padding-left: 32px;
+  padding-bottom: 32px;
+  padding-top: 16px;
 }
 
 .repairCervice-wrapper {
@@ -576,7 +576,7 @@ main.bodyMain .main-container > div {
 
 .comment {
   font-weight: 400;
-  width: 420px;
+  max-width: 420px;
   font-size: 14px;
   line-height: 20px;
   padding-left: 32px;
@@ -613,11 +613,11 @@ footer.body-end div {
 }
 
 @media (max-width: 768px) {
-  html {
-    overflow-x: hidden;
-  }
   .header__group {
     display: none;
+  }
+  header.desktop-ver {
+    padding-top: 10px;
   }
   .tablet-version {
     display: inline-flex;
@@ -644,10 +644,13 @@ footer.body-end div {
     border-right: solid 1px #eaeaea;
   }
   .header__icon {
-    padding-bottom: 10px;
+    max-height: 60px;
   }
   .inf {
     display: none !important;
+  }
+  .logo .separator {
+    display: none;
   }
   .separator {
     width: 2px;
@@ -656,18 +659,19 @@ footer.body-end div {
     border-radius: 1px;
     align-self: center;
   }
-  main {
+  main.bodyMain {
     display: flex;
     flex-direction: column;
     padding: 0;
   }
-  main .main__content2 {
+  main.bodyMain .main__content2 {
     display: none;
   }
-  main .main__content1 {
-    padding: 10px;
+  main.bodyMain .main__content1 {
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  .right-img > img {
+  main.bodyMain .right-img > img {
     width: 100%;
     height: auto;
     border-radius: 0;
@@ -675,6 +679,9 @@ footer.body-end div {
   .navigation {
     max-width: 100%;
     overflow: hidden;
+    max-height: 60px;
+    display: flex;
+    align-items: center;
   }
   .navigation ul {
     display: flex;
@@ -695,10 +702,6 @@ footer.body-end div {
   .navigation ul li a {
     white-space: nowrap;
   }
-  .navigation div.service-wrapper div .swiper-slide {
-    height: 200px;
-    width: 240px;
-  }
   .main-container {
     display: grid;
     gap: 20px;
@@ -715,7 +718,7 @@ footer.body-end div {
     padding-top: 16px;
     height: 32px;
   }
-  .swiper-wrapper li {
+  .brand-swiper .swiper-wrapper li {
     width: 240px;
     height: 160px;
     background-color: #ffffff;
@@ -727,11 +730,43 @@ footer.body-end div {
     justify-content: space-between;
     align-items: flex-start;
   }
-  .swiper-wrapper li img {
+  .brand-swiper .swiper-wrapper li img {
     align-self: flex-end;
   }
   .repairCervice-wrapper {
     display: none;
+  }
+  ul.repairCervice {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding-top: 24px;
+  }
+  ul.repairCervice li {
+    width: 240px;
+    height: 160px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  ul.repairCervice li img {
+    align-self: flex-end;
+  }
+  .service-wrapper div.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 6px;
+    background-color: #ffffff;
+  }
+  .service-wrapper div.swiper-slide img {
+    align-self: flex-end;
   }
 }
 @media (min-width: 769px) and (max-width: 1120px) {

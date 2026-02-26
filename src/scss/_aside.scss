@@ -54,13 +54,11 @@
   footer {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;
     padding: 0px;
     border: none;
-    position: fixed;
-    bottom: 0;
+    margin-top: auto;
 
     > div {
       padding: 0px 24px;
