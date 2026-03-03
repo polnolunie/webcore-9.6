@@ -88,7 +88,6 @@ body {
   }
 
   .navigation {
-    max-height: 80px;
     min-height: 50px;
     padding: 10px;
 
@@ -319,9 +318,8 @@ body {
       text-align: center;
     }
 
-    .body-end3 {
+    .main-footer {
       text-align: right;
-      max-width: 450px;
     }
 
 @media (max-width: 768px) {
@@ -483,11 +481,10 @@ body {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    gap: 32px;
     padding-top: 24px;
 
     li {
-      width: 240px;
+      max-width: 240px;
       height: 160px;
       background-color: #ffffff;
       border: 1px solid #eaeaea;
@@ -511,9 +508,17 @@ body {
       padding: 16px;
       border-radius: 6px;
       background-color: #ffffff;
-
+      max-width: 240px;
       img {
         align-self: flex-end;
+      }
+    }
+  }
+
+  .price-wrapper {
+    .swiper-wrapper {
+      .swiper-slide {
+        max-width: 240px;
       }
     }
   }

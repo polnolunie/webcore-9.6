@@ -5,7 +5,7 @@ console.log('It works!')
 
 document.querySelectorAll('.swiper').forEach((swiperEl) => {
   new Swiper(swiperEl, {
-    slidesPerView: 1.3,
+    slidesPerView: 'auto',
     spaceBetween: 15,
     direction: 'horizontal',
     loop: true,

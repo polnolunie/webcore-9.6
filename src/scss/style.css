@@ -118,7 +118,8 @@
 }
 .modal {
   width: 320px;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: overlay;
   border: none;
   position: fixed;
   padding: 0;
@@ -398,7 +399,6 @@ header.desktop-ver {
 }
 
 .navigation {
-  max-height: 80px;
   min-height: 50px;
   padding: 10px;
 }
@@ -607,9 +607,8 @@ footer.body-end div {
   text-align: center;
 }
 
-.body-end3 {
+.main-footer {
   text-align: right;
-  max-width: 450px;
 }
 
 @media (max-width: 768px) {
@@ -740,11 +739,10 @@ footer.body-end div {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    gap: 32px;
     padding-top: 24px;
   }
   ul.repairCervice li {
-    width: 240px;
+    max-width: 240px;
     height: 160px;
     background-color: #ffffff;
     border: 1px solid #eaeaea;
@@ -764,9 +762,13 @@ footer.body-end div {
     padding: 16px;
     border-radius: 6px;
     background-color: #ffffff;
+    max-width: 240px;
   }
   .service-wrapper div.swiper-slide img {
     align-self: flex-end;
+  }
+  .price-wrapper .swiper-wrapper .swiper-slide {
+    max-width: 240px;
   }
 }
 @media (min-width: 769px) and (max-width: 1120px) {

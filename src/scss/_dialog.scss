@@ -1,6 +1,7 @@
 .modal {
   width: 320px;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: overlay;
   border: none;
   position: fixed;
   padding: 0;
