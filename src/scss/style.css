@@ -25,7 +25,7 @@
 
 .tablet-ver__brandlist {
   box-sizing: border-box;
-  padding: 32px;
+  padding: 16px;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -120,6 +120,7 @@
   width: 320px;
   height: 100vh;
   overflow-y: overlay;
+  overflow-x: hidden;
   border: none;
   position: fixed;
   padding: 0;
@@ -464,7 +465,7 @@ main.bodyMain .main-container > div {
 }
 
 .name {
-  padding-left: 35px;
+  padding-left: 16px;
   display: flex;
   height: 60px;
   color: #7e7e82;
@@ -501,22 +502,27 @@ main.bodyMain .main-container > div {
   padding-top: 16px;
 }
 
-.repairCervice-wrapper {
-  height: 190px;
+.repair-cervice_wrapper {
+  min-height: 190px;
 }
-.repairCervice-wrapper div {
+.repair-cervice_wrapper div {
   padding-top: 24px;
 }
-.repairCervice-wrapper ul.repairCervice {
+.repair-cervice_wrapper ul.repair-cervice {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  gap: 32px;
   padding-top: 24px;
+  padding-left: 16px;
+  margin: 0;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
-.repairCervice-wrapper ul.repairCervice li {
+.repair-cervice_wrapper ul.repair-cervice li {
   width: 240px;
   height: 160px;
+  margin-right: 16px;
+  margin-left: 0;
   background-color: #ffffff;
   border: 1px solid #eaeaea;
   border-radius: 6px;
@@ -524,9 +530,8 @@ main.bodyMain .main-container > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
 }
-.repairCervice-wrapper ul.repairCervice li img {
+.repair-cervice_wrapper ul.repair-cervice li img {
   align-self: flex-end;
 }
 
@@ -535,8 +540,7 @@ main.bodyMain .main-container > div {
   overflow-x: hidden;
   display: flex;
   justify-content: center;
-  position: relative;
-  left: 32px;
+  margin-left: 16px;
 }
 .price-wrapper .price-list {
   border-collapse: collapse;
@@ -579,12 +583,12 @@ main.bodyMain .main-container > div {
   max-width: 420px;
   font-size: 14px;
   line-height: 20px;
-  padding-left: 32px;
+  padding-left: 16px;
   padding-top: 32px;
 }
 
 .commertial-container {
-  padding-left: 32px;
+  padding-left: 16px;
   padding-top: 16px;
   padding-bottom: 80px;
 }
@@ -599,11 +603,8 @@ footer.body-end {
   justify-content: space-between;
   border-top: solid 1px #d9fff5;
 }
-footer.body-end div {
-  padding: 32px;
-}
-
-.body-end2 {
+footer.body-end span {
+  padding-top: 16px;
   text-align: center;
 }
 
@@ -732,16 +733,17 @@ footer.body-end div {
   .brand-swiper .swiper-wrapper li img {
     align-self: flex-end;
   }
-  .repairCervice-wrapper {
+  .repair-cervice_wrapper {
     display: none;
   }
-  ul.repairCervice {
+  div.repair-cervice {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     padding-top: 24px;
+    margin-left: 16px;
   }
-  ul.repairCervice li {
+  div.repair-cervice div {
     max-width: 240px;
     height: 160px;
     background-color: #ffffff;
@@ -753,10 +755,13 @@ footer.body-end div {
     justify-content: space-between;
     align-items: flex-start;
   }
-  ul.repairCervice li img {
+  div.repair-cervice div img {
     align-self: flex-end;
   }
-  .service-wrapper div.swiper-slide {
+  .service-wrapper .swiper-wrapper {
+    margin-left: 16px;
+  }
+  .service-wrapper .swiper-wrapper div.swiper-slide {
     display: flex;
     flex-direction: column;
     padding: 16px;
@@ -764,18 +769,21 @@ footer.body-end div {
     background-color: #ffffff;
     max-width: 240px;
   }
-  .service-wrapper div.swiper-slide img {
+  .service-wrapper .swiper-wrapper div.swiper-slide img {
     align-self: flex-end;
   }
   .price-wrapper .swiper-wrapper .swiper-slide {
     max-width: 240px;
+  }
+  .tablet__showall {
+    display: none;
   }
 }
 @media (min-width: 769px) and (max-width: 1120px) {
   .header__group {
     display: none;
   }
-  .tablet-version-hide {
+  aside.tablet-version-hide {
     display: none;
   }
   header.tablet-version {
@@ -841,6 +849,13 @@ footer.body-end div {
 @media (min-width: 1121px) {
   .mainmenu-right {
     margin-left: 300px;
+  }
+  footer.body-end :first-child {
+    text-align: left;
+  }
+  footer.body-end :last-child {
+    max-width: 450px;
+    text-align: right;
   }
 }
 

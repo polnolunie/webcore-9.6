@@ -71,6 +71,40 @@ closeBtn.addEventListener('click', () => {
   console.log ('close modal');
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const showAllButton = document.querySelector('.showAllButton2');
+  const items = document.querySelectorAll('.repair-cervice .tablet-ver_btn');
 
+  let visibleCount = window.innerWidth >= 1120 ? 4 : 3; // адаптивное количество
+  let isShowingAll = false;
 
+  function updateVisibility() {
+    if (isShowingAll) {
+      items.forEach(item => {
+        item.style.display = 'flex';
+      });
+      showAllButton.innerHTML = '<img src="./img/hideall.svg" alt="showall icon" /> Скрыть';
+    } else {
+      items.forEach((item, index) => {
+        item.style.display = index < visibleCount ? 'flex' : 'none';
+      });
+      showAllButton.innerHTML = '<img src="./img/readmore.svg" alt="showall icon" /> Показать все';
+    }
+  }
 
+  showAllButton.addEventListener('click', () => {
+    isShowingAll = !isShowingAll;
+    updateVisibility();
+  });
+
+  // Обновлять visibleCount при изменении размера окна
+  window.addEventListener('resize', () => {
+    if (!isShowingAll) { // если не показываем все, обновляем количество видимых
+      visibleCount = window.innerWidth >= 1120 ? 4 : 3;
+      updateVisibility();
+    }
+  });
+
+  // Инициализация при загрузке страницы
+  updateVisibility();
+});

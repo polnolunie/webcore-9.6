@@ -159,7 +159,7 @@ body {
     }
 
     .name {
-      padding-left: 35px;
+      padding-left: 16px;
       display: flex;
       height: 60px;
       color: #7e7e82;
@@ -200,23 +200,28 @@ body {
      padding-top:16px;
    }
 
-    .repairCervice-wrapper {
-      height: 190px;
+    .repair-cervice_wrapper {
+      min-height: 190px;
 
       div {
         padding-top: 24px;
       }
 
-      ul.repairCervice {
+      ul.repair-cervice {
         list-style-type: none;
         display: flex;
         flex-direction: row;
-        gap: 32px;
         padding-top: 24px;
+        padding-left: 16px;
+        margin: 0;
+        flex-wrap: wrap;
+        overflow: hidden;
 
         li {
           width: 240px;
           height: 160px;
+          margin-right: 16px;
+          margin-left: 0;
           background-color: #ffffff;
           border: 1px solid #eaeaea;
           border-radius: 6px;
@@ -224,7 +229,6 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          align-items: flex-start;
 
           img {
             align-self: flex-end;
@@ -238,8 +242,7 @@ body {
       overflow-x: hidden;
       display: flex;
       justify-content: center;
-      position: relative;
-      left: 32px;
+      margin-left: 16px;
 
       .price-list {
         border-collapse: collapse;
@@ -288,11 +291,11 @@ body {
       max-width: 420px;
       font-size: 14px;
       line-height: 20px;
-      padding-left: 32px;
+      padding-left: 16px;
       padding-top: 32px;
     }
     .commertial-container {
-      padding-left: 32px;
+      padding-left: 16px;
       padding-top: 16px;
       padding-bottom: 80px;
 
@@ -308,14 +311,10 @@ body {
       justify-content: space-between;
       border-top: solid 1px #d9fff5;
 
-      div {
-        padding: 32px;
+      span {
+        padding-top: 16px;
+        text-align: center;
       }
-
-    }
-
-    .body-end2 {
-      text-align: center;
     }
 
     .main-footer {
@@ -473,17 +472,18 @@ body {
     }
   }
 
-  .repairCervice-wrapper {
+  .repair-cervice_wrapper {
     display: none;
   }
 
-  ul.repairCervice {
+  div.repair-cervice {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     padding-top: 24px;
+    margin-left: 16px;
 
-    li {
+    div {
       max-width: 240px;
       height: 160px;
       background-color: #ffffff;
@@ -502,15 +502,19 @@ body {
   }
 
   .service-wrapper {
-    div.swiper-slide {
-      display: flex;
-      flex-direction: column;
-      padding: 16px;
-      border-radius: 6px;
-      background-color: #ffffff;
-      max-width: 240px;
-      img {
-        align-self: flex-end;
+    .swiper-wrapper {
+      margin-left: 16px;
+      div.swiper-slide {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        border-radius: 6px;
+        background-color: #ffffff;
+        max-width: 240px;
+
+        img {
+          align-self: flex-end;
+        }
       }
     }
   }
@@ -522,7 +526,9 @@ body {
       }
     }
   }
-
+ .tablet__showall {
+   display: none;
+ }
 }
 
 @media (min-width: 769px) and (max-width: 1120px) {
@@ -530,7 +536,7 @@ body {
     display: none;
   }
 
-  .tablet-version-hide {
+  aside.tablet-version-hide {
     display: none;
   }
 
@@ -607,5 +613,15 @@ body {
 @media (min-width: 1121px) {
   .mainmenu-right {
     margin-left: 300px;
+  }
+
+  footer.body-end {
+    :first-child {
+      text-align: left;
+    }
+    :last-child {
+      max-width: 450px;
+      text-align: right;
+    }
   }
 }
